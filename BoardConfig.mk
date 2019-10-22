@@ -20,7 +20,7 @@
 DEVICE_PATH := device/xiaomi/kenzo
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := kate,kenzo
+TARGET_OTA_ASSERT_DEVICE := none
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
