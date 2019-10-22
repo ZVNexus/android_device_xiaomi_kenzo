@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright 2019 The Dirty Unicorns Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +17,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from kipper device
+# Inherit device specific.
 $(call inherit-product, device/xiaomi/kenzo/device.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := full_kenzo
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := kenzo
+# Inherit DU.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
+
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_BRAND := Xioami
+PRODUCT_NAME := du_kenzo
+PRODUCT_DEVICE := kenzo
+PRODUCT_MODEL := Redmi Note 3
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

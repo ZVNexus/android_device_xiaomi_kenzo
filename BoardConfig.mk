@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common msm8956-common
+# Common
 -include device/xiaomi/msm8956-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/kenzo
@@ -30,7 +30,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 26838785024 # 26838801408 - 16384
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_kenzo_defconfig
+TARGET_KERNEL_CONFIG := kenzo_defconfig
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -38,9 +38,8 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Sepolicy
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Enable real time lockscreen charging current values
+# Lockscreen charging values.
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
-
-# inherit from the proprietary version
+# Proprietary
 -include vendor/xiaomi/kenzo/BoardConfigVendor.mk

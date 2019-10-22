@@ -9,7 +9,6 @@ persist.vendor.audio.fluence.voicerec=false
 vendor.voice.voip.conc.disabled=true
 audio.offload.multiaac.enable=true
 
-
 # Radio
 persist.radio.cs_srv_type=1
 persist.radio.force_on_dc=true
@@ -40,4 +39,3 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
-
